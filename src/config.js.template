@@ -1,0 +1,27 @@
+// mongodb
+const dbConfig = {
+  uri: 'mongodb://localhost:27017/tear',
+  options: {
+    useMongoClient: true
+  }
+};
+// api server
+const serverConfig = {
+  host: 'localhost',
+  port: 4000,
+  jwt: { key: '随便', expiresIn: '20 days' }
+};
+// web server 邮件发送时可以从这里取值
+const webConfig = {
+  host: 'summertear.com',
+  port: 443
+};
+const mailConfig = {
+  host: 'smtp.mxhichina.com',
+  port: 465,
+  from: { name: 'SummerTear', address: 'st@summertear.com' },
+  username: 'st@summertear.com',
+  password: '密码'
+};
+
+export { dbConfig, serverConfig, webConfig, mailConfig };
